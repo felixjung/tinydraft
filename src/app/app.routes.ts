@@ -25,24 +25,24 @@ export const tinydraftRoutes = [
     }
   },
   {
-    path: 'new',
-    component: EditorComponent,
-    resolve: {
-      draft: EmptyDraftResolve
-    }
-  },
-  {
-    path: 'draft/:id',
+    path: 'drafts/:id',
     component: DraftDetailComponent,
     resolve: {
       draft: DraftResolve,
     }
   },
   {
-    path: 'edit/:id',
+    path: 'drafts/:id/edit',
     component: EditorComponent,
     resolve: {
       draft: DraftResolve,
+    }
+  },
+  {
+    path: 'new',
+    component: EditorComponent,
+    resolve: {
+      draft: EmptyDraftResolve
     }
   }
 ];

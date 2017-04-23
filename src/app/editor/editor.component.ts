@@ -44,10 +44,10 @@ export class EditorComponent implements OnInit {
     if (this.draft.text !== '') {
       this.draftsService.saveDraft(this.draft)
         .subscribe((d) => {
-          this.router.navigateByUrl('/');
+          this.router.navigate(['drafts']);
         });
     } else {
-      this.router.navigateByUrl('/');
+      this.router.navigate(['drafts']);
     }
   }
 

@@ -43,11 +43,11 @@ export class DraftComponent implements OnInit {
   }
 
   viewDraft(id) {
-    this.router.navigate(['draft', id]);
+    this.router.navigate(['drafts', id]);
   }
 
   editDraft(id) {
-    this.router.navigate(['edit', id]);
+    this.router.navigate(['drafts', id, 'edit']);
   }
 
   deleteDraft(id) {
