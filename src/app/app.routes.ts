@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { DraftslistComponent } from './draftslist/draftslist.component';
 import { DraftComponent } from './draft/draft.component';
 import { EditorComponent } from './editor/editor.component';
@@ -12,6 +13,10 @@ import {
 export const tinydraftRoutes = [
   {
     path: '',
+    component: LoginComponent
+  },
+  {
+    path: 'drafts',
     component: DraftslistComponent,
     resolve: {
       drafts: DraftsListResolve

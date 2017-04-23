@@ -21,6 +21,7 @@ import {
   DraftsListResolve,
 } from './service/drafts.resolve';
 import { DraftDetailComponent } from './draft-detail/draft-detail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DraftDetailComponent } from './draft-detail/draft-detail.component';
     TitleComponent,
     EditorComponent,
     DraftDetailComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
