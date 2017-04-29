@@ -14,15 +14,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^4.0.0 ",
-    "@angular/compiler": "^4.0.0 ",
-    "@angular/core": "^4.0.0 ",
-    "@angular/flex-layout": "^2.0.0-beta.7",
-    "@angular/forms": "^4.0.0 ",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.0.0",
+    "@angular/common": "^4.0.3",
+    "@angular/compiler": "^4.0.3 ",
+    "@angular/core": "^4.0.3",
+    "@angular/flex-layout": "^2.0.0-rc.1",
+    "@angular/forms": "^4.0.3 ",
+    "@angular/http": "^4.0.3",
+    "@angular/platform-browser": "^4.0.3",
+    "@angular/platform-browser-dynamic": "^4.0.3",
+    "@angular/router": "^4.0.3",
     "@types/markdown-it": "0.0.2",
     "angular2-elastic": "^0.13.0",
     "basscss": "^8.0.2",
@@ -39,7 +39,7 @@
     "seamless-immutable": "^7.0.1",
     "snarkdown": "^1.2.2",
     "upup": "^0.3.0",
-    "zone.js": "^0.8.5"
+    "zone.js": "^0.8.9"
   },
   "devDependencies": {
     "@angular/cli": "^1.0.0",
