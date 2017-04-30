@@ -37,7 +37,6 @@ export class AuthService {
 
   logout(): void {
     this.redirectUrl = '';
-    debugger;
     this.afAuth.auth.signOut()
       .catch(err => {
         console.log('An error occured');
