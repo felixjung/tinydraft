@@ -17,15 +17,14 @@ import { DraftActionsComponent } from './draft-actions/draft-actions.component';
 import { TitleComponent } from './title/title.component';
 import { tinydraftRoutes } from './app.routes';
 import { EditorComponent } from './editor/editor.component';
-import { DraftsService } from './service/drafts.service';
+import { DraftsService } from './services/drafts.service';
 import {
   DraftResolve,
   FavedDraftsResolve,
   EmptyDraftResolve,
   DraftsListResolve,
-} from './service/drafts.resolve';
+} from './services/drafts.resolve';
 import { DraftDetailComponent } from './draft-detail/draft-detail.component';
-import { LoginComponent } from './login/login.component';
 import { firebaseConfig } from './firebase.config';
 
 @NgModule({

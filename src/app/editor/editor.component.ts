@@ -7,7 +7,7 @@ import {
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
-import { DraftsService } from '../service/drafts.service';
+import { DraftsService } from '../services/drafts.service';
 import { Draft } from '../app.interface';
 
 @Component({
