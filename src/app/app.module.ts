@@ -25,6 +25,8 @@ import {
   DraftsListResolve,
 } from './services/drafts.resolve';
 import { DraftDetailComponent } from './draft-detail/draft-detail.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 import { firebaseConfig } from './firebase.config';
 
 @NgModule({
@@ -54,6 +56,8 @@ import { firebaseConfig } from './firebase.config';
     EmptyDraftResolve,
     DraftsService,
     FavedDraftsResolve,
+    AuthService,
+    AuthGuardService,
   ],
   bootstrap: [AppComponent]
 })

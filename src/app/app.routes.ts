@@ -9,6 +9,7 @@ import {
   EmptyDraftResolve,
   DraftsListResolve,
 } from './services/drafts.resolve';
+import { AuthGuardService } from './services/auth-guard.service';
 
 export const tinydraftRoutes = [
   {
@@ -18,6 +19,7 @@ export const tinydraftRoutes = [
   {
     path: 'drafts',
     component: DraftslistComponent,
+    canActivate: [AuthGuardService],
     resolve: {
       drafts: DraftsListResolve
     }
@@ -25,6 +27,7 @@ export const tinydraftRoutes = [
   {
     path: 'faved',
     component: DraftslistComponent,
+    canActivate: [AuthGuardService],
     resolve: {
       drafts: FavedDraftsResolve
     }
@@ -32,6 +35,7 @@ export const tinydraftRoutes = [
   {
     path: 'drafts/:id',
     component: DraftDetailComponent,
+    canActivate: [AuthGuardService],
     resolve: {
       draft: DraftResolve,
     }
@@ -39,6 +43,7 @@ export const tinydraftRoutes = [
   {
     path: 'drafts/:id/edit',
     component: EditorComponent,
+    canActivate: [AuthGuardService],
     resolve: {
       draft: DraftResolve,
     }
@@ -46,6 +51,7 @@ export const tinydraftRoutes = [
   {
     path: 'new',
     component: EditorComponent,
+    canActivate: [AuthGuardService],
     resolve: {
       draft: EmptyDraftResolve
     }
