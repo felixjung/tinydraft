@@ -35,9 +35,14 @@ export class AuthService {
     );
   }
 
-  logout(): void {
+  logout(redirect: boolean = false): void {
     this.redirectUrl = '';
     this.afAuth.auth.signOut()
+      .then(() => {
+        if (redirect) {
+          this.router.navigate([this.redirectUrl]);
+        }
+      })
       .catch(err => {
         console.log('An error occured');
       })

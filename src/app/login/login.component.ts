@@ -6,15 +6,15 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  login() {
-    this.authService.login();
+  ngOnInit() {
+    this.authService.logout(false);
   }
 
-  logout() {
-    this.authService.logout();
+  login() {
+    this.authService.login();
   }
 }
