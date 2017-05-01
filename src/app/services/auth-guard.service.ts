@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import {
   CanActivate,
-  Router,
   ActivatedRouteSnapshot,
   RouterStateSnapshot
  } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/do';
 
 import { AuthService } from './auth.service';
 
@@ -14,7 +14,6 @@ export class AuthGuardService implements CanActivate  {
 
   constructor(
     private authService: AuthService,
-    private router: Router
   ) { }
 
   canActivate(
@@ -30,10 +29,8 @@ export class AuthGuardService implements CanActivate  {
     return this.authService.isLoggedIn()
       .do(authenticated => {
         if (!authenticated) {
-          console.log('User not logged in.');
-          this.authService.redirectUrl = url;
-          this.router.navigate(['']);
+          this.authService.authenticateForUrl(url);
         }
-      })
+      });
   }
 }
